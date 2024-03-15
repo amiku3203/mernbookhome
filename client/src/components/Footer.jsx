@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
         <div className="footer_right_info">
           <Email />
-          <p>dreamnest@support.com</p>
+          <p>homebook@support.com</p>
         </div>
         <img src="/assets/payment.png" alt="payment" />
       </div>
