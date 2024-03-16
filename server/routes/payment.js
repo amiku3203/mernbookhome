@@ -30,8 +30,8 @@ console.log(lineItems);
             line_items:lineItems,
             mode:"payment",
              mode: "payment",
-             success_url: `http://localhost:8000/properties/${products[0].listingId}`,
-             cancel_url: "http://localhost:8000/cancel",
+             success_url: `https://travelbookhome.netlify.app/properties/${products[0].listingId}`,
+             cancel_url: "https://travelbookhome.netlify.app/cancel",
          });
         if(session.id){
           const booking=await  Listing.findById(products[0].listingId);

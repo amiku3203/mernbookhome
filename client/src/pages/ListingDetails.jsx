@@ -10,14 +10,14 @@ import { useSelector } from "react-redux";
 import Footer from "../components/Footer";
  
 import { loadStripe } from "@stripe/stripe-js";
-import { Elements } from "@stripe/react-stripe-js";
+ 
 
 const ListingDetails = () => {
   const [loading, setLoading] = useState(true);
   const { listingId } = useParams();
   const [listing, setListing] = useState({});
   const [dateRange, setDateRange] = useState([new Date(), new Date()]);
-  const stripePromise = loadStripe("pk_test_51OstCZSEms8zIkO8cn5y4p0SCmkzRu6Icjedv3NuohunCIeGjF4KcX8XqFHrdHf5MzNJHTorI6vkaKBb3aw4Si8Y00Y87Tcdg4");
+   
   const [paymentStatus, setPaymentStatus] = useState("checkout");
 
   useEffect(() => {
@@ -212,7 +212,7 @@ const ListingDetails = () => {
   onClick={makePayment}
   disabled={listing.payment}
   style={{
-    backgroundColor: listing.payment ? 'green' : 'transparent',
+    backgroundColor: listing.payment ? 'green' : 'red',
     color: listing.payment ? 'white' : 'white',
   }}
 >
